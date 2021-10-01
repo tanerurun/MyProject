@@ -11,10 +11,13 @@ namespace DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=Northwind;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP - 8FBSMG9;Database=NORTHWND;Trusted_Connection=true");
         }
-        public DbSet<Product> Urunler { get; set; }
-        public DbSet<Category> Kategoriler { get; set; }
-        public DbSet<Customer> Musteriler { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }
+ 
+ 
